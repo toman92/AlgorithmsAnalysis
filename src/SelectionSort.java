@@ -15,7 +15,6 @@ public class SelectionSort extends Sort {
         for(int i = 0; i < toSort.length-1; i++) {
             // the first element in the array is set to smallest
             int smallest = i;
-
             for(int j = i+1; j < toSort.length; j++) {
                 incChecks();
                 //if current element is smaller than smallest, that element is then assigned to smallest
@@ -29,7 +28,6 @@ public class SelectionSort extends Sort {
             int temp = toSort[i];
             toSort[i] = toSort[smallest];
             toSort[smallest] = temp;
-            incSwaps(3);
         }
         return toSort;
     }

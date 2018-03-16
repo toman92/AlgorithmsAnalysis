@@ -12,13 +12,20 @@ public class Array {
     public static final int MEDIUM = 10000;
     public static final int LARGE = 100000;
 
+    // number generator
+    private Random noGen;
+
+    public Array() {
+        noGen = new Random();
+    }
+
     /**
         Populates array with random number ranging from 0 to size of array
         @param size - int size array should be. Use class finals
         @return array populated with random elements
      */
     public int[] getRandomArray(int size) {
-        Random noGen = new Random();
+        //Random noGen = new Random();
         int[] toPop = new int[size];
         for(int i = 0; i < toPop.length; i++) {
             toPop[i] = noGen.nextInt(toPop.length);
@@ -57,8 +64,8 @@ public class Array {
         @param toPrint array to print
      */
     public void printArray(int[] toPrint) {
-        for(int i = 0; i < toPrint.length; i++) {
-            System.out.print(toPrint[i] + " ");
+        for(int i : toPrint) {
+            System.out.print(i + " ");
         }
     }
 }

@@ -13,22 +13,26 @@ public class InsertionSort extends Sort {
     @Override
     public int[] sort(int[] toSort) {
         for(int i = 1; i < toSort.length; i++) {
+            incChecks();
             int next = toSort[i];
             // find the insertion location while moving all larger elements up
             int j = i;
             while(j > 0 && toSort[j-1] > next) {
+                incChecks();
                 toSort[j] = toSort[j-1];
                 incSwaps();
-                incChecks();
                 j--;
             }
             // insert the next element
             toSort[j] = next;
-            incSwaps();
         }
         return toSort;
     }
 
+    /**
+     * Tester method for Insertion Sort algorithm
+     * @param args
+     */
     public static void main(String[] args) {
         InsertionSort insert = new InsertionSort();
         Array myArray = new Array();

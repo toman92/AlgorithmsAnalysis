@@ -1,3 +1,9 @@
+/**
+ * Author:  Sean Toman
+ * Date:    16/03/2018
+ * Desc:    A custom JPanel to hold four SortPanels. One for each algorithm.
+ */
+
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
@@ -14,8 +20,6 @@ public class ElementPanel extends JPanel {
 
         labelPanel = new JPanel();
         labelPanel.setLayout(new GridLayout(3, 1));
-        labelPanel.setAlignmentY(JPanel.BOTTOM_ALIGNMENT);
-        labelPanel.setAlignmentX(JPanel.RIGHT_ALIGNMENT);
         labelPanel.add(jlbTime = new JLabel("Time - Nanoseconds: "));
         labelPanel.add(jlbSwaps = new JLabel("Number of Writes: "));
         labelPanel.add(jlbChecks = new JLabel("Number of Comparisons: "));

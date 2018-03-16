@@ -56,6 +56,14 @@ public abstract class Sort {
     }
 
     /**
+     * Reset counter back to 0
+     */
+    public void reset() {
+        this.swaps = 0;
+        this.checks = 0;
+    }
+
+    /**
         takes an array in, sort it and returns the sorted array
         To be implemented by child classes
         @param toSort int array to sort

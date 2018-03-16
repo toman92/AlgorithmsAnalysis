@@ -1,3 +1,9 @@
+/**
+ * Author:  Sean Toman
+ * Date:    16/03/2018
+ * Desc:    A Custom panel to hold the sorting algorithms time, swaps and checks
+ */
+
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
@@ -14,13 +20,9 @@ public class SortPanel extends JPanel {
         add(this.heading = new JLabel(heading));
         this.heading.setHorizontalAlignment(JLabel.CENTER);
 
-        add(jtfTime = new JTextField(15));
-        add(jtfSwaps = new JTextField(15));
-        add(jtfChecks = new JTextField(15));
-    }
-
-    public JLabel getHeading() {
-        return heading;
+        add(jtfTime = new JTextField(30));
+        add(jtfSwaps = new JTextField(30));
+        add(jtfChecks = new JTextField(30));
     }
 
     public JTextField getJtfTime() {
