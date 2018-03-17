@@ -6,8 +6,8 @@
 
 public abstract class Sort {
 
-    private int checks;
-    private int swaps;
+    private long checks;
+    private long swaps;
 
     /**
      * Constructor initialises checks and swaps to 0
@@ -21,7 +21,7 @@ public abstract class Sort {
      * return the current number of checks that have occurred
      * @return
      */
-    public int getChecks() {
+    public long getChecks() {
         return this.checks;
     }
 
@@ -29,7 +29,7 @@ public abstract class Sort {
      * return the current number of swaps that have occurred
      * @return - number of swaps
      */
-    public int getSwaps() {
+    public long getSwaps() {
         return this.swaps;
     }
 
@@ -51,7 +51,7 @@ public abstract class Sort {
      * Increments swaps by given amount
      * @param amount - amount to increment swaps
      */
-    public void incSwaps(int amount) {
+    public void incSwaps(long amount) {
         this.swaps += amount;
     }
 

@@ -20,7 +20,6 @@ public class SelectionSort extends Sort {
                 //if current element is smaller than smallest, that element is then assigned to smallest
                 if(toSort[j] < toSort[smallest]) {
                     smallest = j;
-                    incSwaps();
                 }
             }
 
@@ -28,6 +27,7 @@ public class SelectionSort extends Sort {
             int temp = toSort[i];
             toSort[i] = toSort[smallest];
             toSort[smallest] = temp;
+            incSwaps();
         }
         return toSort;
     }

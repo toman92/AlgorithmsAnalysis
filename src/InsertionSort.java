@@ -18,13 +18,14 @@ public class InsertionSort extends Sort {
             // find the insertion location while moving all larger elements up
             int j = i;
             while(j > 0 && toSort[j-1] > next) {
-                incChecks();
+                //incChecks();
                 toSort[j] = toSort[j-1];
                 incSwaps();
                 j--;
             }
             // insert the next element
             toSort[j] = next;
+            //incSwaps();
         }
         return toSort;
     }

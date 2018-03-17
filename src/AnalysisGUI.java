@@ -209,7 +209,7 @@ public class AnalysisGUI extends JFrame {
          * @param elements - int array of elements to sort
          * @return - time it took to sort the array
          */
-        private float sortTime(int algorithm, int[] elements) {
+        private long sortTime(int algorithm, int[] elements) {
             watch.reset();
             watch.start();
             switch(algorithm) {
