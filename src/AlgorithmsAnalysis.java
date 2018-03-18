@@ -30,29 +30,29 @@ public class AlgorithmsAnalysis {
         switch(elementOption) {
             case 1:
                 if(sizeOption == 1)
-                    randomElements = array.getRandomArray(Array.SMALL);
+                    randomElements = array.createRandom(Array.SMALL);
                 else if(sizeOption == 2)
-                    randomElements = array.getRandomArray(Array.MEDIUM);
+                    randomElements = array.createRandom(Array.MEDIUM);
                 else if(sizeOption == 3)
-                    randomElements = array.getRandomArray(Array.LARGE);
+                    randomElements = array.createRandom(Array.LARGE);
                 break;
 
             case 2:
                 if(sizeOption == 1)
-                    sortedElements = array.getSortedArray(Array.SMALL);
+                    sortedElements = array.createSorted(Array.SMALL);
                 else if(sizeOption == 2)
-                    sortedElements = array.getSortedArray(Array.MEDIUM);
+                    sortedElements = array.createSorted(Array.MEDIUM);
                 else if(sizeOption == 3)
-                    sortedElements = array.getSortedArray(Array.LARGE);
+                    sortedElements = array.createSorted(Array.LARGE);
                 break;
 
             case 3:
                 if(sizeOption == 1)
-                    invertedElements = array.getInvertedArray(Array.SMALL);
+                    invertedElements = array.createInverted(Array.SMALL);
                 else if(sizeOption == 2)
-                    invertedElements = array.getInvertedArray(Array.MEDIUM);
+                    invertedElements = array.createInverted(Array.MEDIUM);
                 else if(sizeOption == 3)
-                    invertedElements = array.getInvertedArray(Array.LARGE);
+                    invertedElements = array.createInverted(Array.LARGE);
                 break;
         }
 

@@ -35,14 +35,14 @@ public class BubbleSort extends Sort {
         Array myArray = new Array();
         StopWatch timer = new StopWatch();
 
-        int[] smallRandom = myArray.getSortedArray(Array.LARGE);
+        //int[] smallRandom = myArray.getSortedArray(Array.LARGE);
 
 
         //myArray.printArray(smallRandom);
 
         //System.out.println();
         timer.start();
-        smallRandom = bubble.sort(smallRandom);
+        //smallRandom = bubble.sort(smallRandom);
         timer.stop();
         System.out.println("Time in nano secs: " + timer.getElapsedTime());
         System.out.println();

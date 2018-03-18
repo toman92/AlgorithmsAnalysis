@@ -1,3 +1,8 @@
+/**
+ *  Author: Sean Toman
+ *  Date:   18/03/2018
+ *  Desc:   A child class of Sort, class to represent the enhanced bubble sort algorithms
+ */
 public class EnBubbleSort extends Sort {
 
     public EnBubbleSort() {
