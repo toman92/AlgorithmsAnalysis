@@ -7,24 +7,23 @@
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class ElementPanel extends JPanel {
 
     private SortPanel bubblePanel, enBubblePanel, selectPanel, insertPanel;
-    private JPanel labelPanel;
-    private JLabel jlbTime, jlbSwaps, jlbChecks;
 
     public ElementPanel(String title) {
-        setLayout(new GridLayout(1, 5));
+        setLayout(new GridLayout(1, 5, 10, 10));
         setBorder(new TitledBorder(title));
 
-        labelPanel = new JPanel();
+        JPanel labelPanel = new JPanel();
         labelPanel.setLayout(new GridLayout(3, 1));
-        labelPanel.add(jlbTime = new JLabel("Time - Nanoseconds: "));
-        labelPanel.add(jlbSwaps = new JLabel("Number of Writes: "));
-        labelPanel.add(jlbChecks = new JLabel("Number of Comparisons: "));
+        labelPanel.add(new JLabel("Time - Nanoseconds: "));
+        labelPanel.add(new JLabel("Number of Writes: "));
+        labelPanel.add(new JLabel("Number of Comparisons: "));
 
-        // set up Sort Panels
+        // set up Sort Panels to hold data on each algorithm
         bubblePanel = new SortPanel("Standard Bubble");
         enBubblePanel = new SortPanel("Enhanced Bubble Sort");
         selectPanel = new SortPanel("Selection Sort");

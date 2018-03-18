@@ -75,7 +75,7 @@ public class Array {
     }
 
     /**
-     * Returns a copy of the original random array so original is preserved for later reference
+     * Copies the original random array to return so original is preserved for later reference
      * @return - copy of original random array
      */
     public int[] getRandomOriginal() {
