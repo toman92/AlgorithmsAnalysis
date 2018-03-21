@@ -14,14 +14,21 @@ public class ElementPanel extends JPanel {
     private SortPanel bubblePanel, enBubblePanel, selectPanel, insertPanel;
 
     public ElementPanel(String title) {
+        ArrayList<JLabel> labels = new ArrayList<>();
         setLayout(new GridLayout(1, 5, 10, 10));
         setBorder(new TitledBorder(title));
 
         JPanel labelPanel = new JPanel();
-        labelPanel.setLayout(new GridLayout(3, 1));
-        labelPanel.add(new JLabel("Time - Nanoseconds: "));
-        labelPanel.add(new JLabel("Number of Writes: "));
-        labelPanel.add(new JLabel("Number of Comparisons: "));
+        labels.add(new JLabel(""));
+        labels.add(new JLabel("Time - NanoSeconds: "));
+        labels.add(new JLabel("Number of Writes: "));
+        labels.add(new JLabel("Number of Comparisons: "));
+        labelPanel.setLayout(new GridLayout(4, 1));
+        for(JLabel l : labels) {
+            l.setHorizontalAlignment(JLabel.RIGHT);
+            labelPanel.add(l);
+        }
+
 
         // set up Sort Panels to hold data on each algorithm
         bubblePanel = new SortPanel("Standard Bubble");

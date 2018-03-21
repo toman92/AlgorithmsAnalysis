@@ -1,9 +1,9 @@
 /** Author:  Sean Toman
  *  Date:    16/03/2018
- *  Desc:    GUI Program to analise efficiency of four inefficient sorting algorithms
+ *  Desc:    GUI Program to analise efficiency of four inefficient sorting algorithms against one another
  *           Bubble sort, enhanced bubble sort, selection sort and insertion sort.
  *           It displays the time it took to sort three arrays of random, sorted and inversely sorted elements
- *           It also displays how many swaps (writes) and comparisons (reads) took place
+ *           It also displays how many swaps and comparisons took place
  */
 
 import javax.swing.*;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class AnalysisGUI extends JFrame {
 
-    // Algorithms and helpers
+    // Algorithm classes and helpers
     private BubbleSort bubbleSort;
     private EnBubbleSort enBubbleSort;
     private InsertionSort insertionSort;
@@ -61,7 +61,8 @@ public class AnalysisGUI extends JFrame {
 
         // create, setup and add buttons to bottom panel
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridLayout(1, 4, 10, 10));
+        buttonPanel.setLayout(new GridLayout(1, 5, 10, 10));
+        buttonPanel.add(new JLabel(""));
         sortBtns.add(new JButton("Bubble"));
         sortBtns.add(new JButton("E. Bubble"));
         sortBtns.add(new JButton("Selection"));
@@ -82,19 +83,16 @@ public class AnalysisGUI extends JFrame {
         }
 
         // initially create 3 arrays of 1000 elements.
-        // inner listener to listen for the array size changing. If it changes, create 3 new arrays of giving size
+        // anonymous listener to listen for the array size changing. If it changes, create 3 new arrays of giving size
         int arraySize = (int) jcbxSize.getSelectedItem();
         arrayHelp.createRandom(arraySize);
         arrayHelp.createSorted(arraySize);
         arrayHelp.createInverted(arraySize);
-        jcbxSize.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                int newArraySize = (int) jcbxSize.getSelectedItem();
-                arrayHelp.createRandom(newArraySize);
-                arrayHelp.createSorted(newArraySize);
-                arrayHelp.createInverted(newArraySize);
-            }
+        jcbxSize.addActionListener(e -> {
+            int newArraySize = (int) jcbxSize.getSelectedItem();
+            arrayHelp.createRandom(newArraySize);
+            arrayHelp.createSorted(newArraySize);
+            arrayHelp.createInverted(newArraySize);
         });
     }
 
