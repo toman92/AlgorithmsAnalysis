@@ -29,27 +29,4 @@ public class InsertionSort extends Sort {
         }
         return toSort;
     }
-
-    /**
-     * Tester method for Insertion Sort algorithm
-     * @param args
-     */
-    public static void main(String[] args) {
-        InsertionSort insert = new InsertionSort();
-        Array myArray = new Array();
-        StopWatch timer = new StopWatch();
-
-        //int[] smallRandom = myArray.getRandomArray(Array.SMALL);
-        //int[] smallSorted = myArray.getSortedArray(Array.SMALL);
-        //int[] smallInvert = myArray.getInvertedArray(Array.SMALL);
-
-        timer.start();
-        //insert.sort(smallRandom);
-        timer.stop();
-        System.out.println("Time in nano seconds to sort random: " + timer.getElapsedTime());
-        System.out.println("Checks: " + insert.getChecks());
-        System.out.println("Swaps: " + insert.getSwaps());
-
-        timer.reset();
-    }
 }

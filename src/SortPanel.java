@@ -1,7 +1,8 @@
 /**
  * Author:  Sean Toman
  * Date:    16/03/2018
- * Desc:    A Custom panel to hold the sorting algorithms time, swaps and checks
+ * Desc:    A Custom panel to hold the sorting algorithms time, swaps and checks.
+ *          SortPanel IS-A JPanel
  */
 
 import javax.swing.*;

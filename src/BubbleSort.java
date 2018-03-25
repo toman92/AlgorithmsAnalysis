@@ -25,30 +25,4 @@ public class BubbleSort extends Sort {
         }
         return toSort;
     }
-
-    /**
-     * Main method to test BuubleSort class
-     * @param args
-     */
-    public static void main(String[] args) {
-        BubbleSort bubble = new BubbleSort();
-        Array myArray = new Array();
-        StopWatch timer = new StopWatch();
-
-        //int[] smallRandom = myArray.getSortedArray(Array.LARGE);
-
-
-        //myArray.printArray(smallRandom);
-
-        //System.out.println();
-        timer.start();
-        //smallRandom = bubble.sort(smallRandom);
-        timer.stop();
-        System.out.println("Time in nano secs: " + timer.getElapsedTime());
-        System.out.println();
-
-        //myArray.printArray(smallRandom);
-        System.out.println("Checks: " + bubble.getChecks());
-        System.out.println("Swaps: " + bubble.getSwaps());
-    }
 }

@@ -52,7 +52,7 @@ public class AnalysisGUI extends JFrame {
         elementPanels.add(randomPanel = new ElementPanel("Random Elements"));
         elementPanels.add(sortedPanel = new ElementPanel("Sorted Elements"));
         elementPanels.add(invertedPanel = new ElementPanel("Inverted Elements"));
-        // add the 3 panels to a single panel
+        // add the 3 panels to a single panel to fit in frame
         JPanel analysisPanel = new JPanel();
         analysisPanel.setLayout(new GridLayout(3, 1, 10, 10));
         for(ElementPanel p : elementPanels) {
@@ -62,12 +62,14 @@ public class AnalysisGUI extends JFrame {
         // create, setup and add buttons to bottom panel
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new GridLayout(1, 5, 10, 10));
-        buttonPanel.add(new JLabel(""));
+        buttonPanel.add(new JLabel());
         sortBtns.add(new JButton("Bubble"));
         sortBtns.add(new JButton("E. Bubble"));
         sortBtns.add(new JButton("Selection"));
         sortBtns.add(new JButton("Insertion"));
         for(JButton btn : sortBtns) {
+            // Set mnemonic of each button to the first character
+            btn.setMnemonic(btn.getText().charAt(0));
             buttonPanel.add(btn);
         }
 
@@ -83,12 +85,12 @@ public class AnalysisGUI extends JFrame {
         }
 
         // initially create 3 arrays of 1000 elements.
-        // anonymous listener to listen for the array size changing. If it changes, create 3 new arrays of giving size
         int arraySize = (int) jcbxSize.getSelectedItem();
         arrayHelp.createRandom(arraySize);
         arrayHelp.createSorted(arraySize);
         arrayHelp.createInverted(arraySize);
-        jcbxSize.addActionListener(e -> {
+        // anonymous listener to listen for the array size combo box changing. If it changes, create 3 new arrays of giving size
+        jcbxSize.addActionListener((ActionEvent e) -> {
             int newArraySize = (int) jcbxSize.getSelectedItem();
             arrayHelp.createRandom(newArraySize);
             arrayHelp.createSorted(newArraySize);
