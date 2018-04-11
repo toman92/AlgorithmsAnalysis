@@ -23,7 +23,7 @@ public class ElementPanel extends JPanel {
         JPanel labelPanel = new JPanel();
         labels.add(new JLabel());
         labels.add(new JLabel("Time - NanoSeconds: "));
-        labels.add(new JLabel("Number of Swaps: "));
+        labels.add(new JLabel("Number of Writes: "));
         labels.add(new JLabel("Number of Comparisons: "));
         labelPanel.setLayout(new GridLayout(4, 1));
         for(JLabel l : labels) {

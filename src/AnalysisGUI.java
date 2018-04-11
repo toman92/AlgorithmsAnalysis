@@ -115,60 +115,60 @@ public class AnalysisGUI extends JFrame {
             switch(e.getActionCommand()) {
                 case "Bubble":
                     randomPanel.getBubblePanel().getJtfTime().setText("" + sortTime(bubbleSort, arrayHelp.getRandomOriginal()));
-                    randomPanel.getBubblePanel().getJtfSwaps().setText("" + bubbleSort.getSwaps());
+                    randomPanel.getBubblePanel().getJtfSwaps().setText("" + bubbleSort.getWrites());
                     randomPanel.getBubblePanel().getJtfChecks().setText("" + bubbleSort.getChecks());
                     bubbleSort.reset();
                     sortedPanel.getBubblePanel().getJtfTime().setText("" + sortTime(bubbleSort, arrayHelp.getSortedOriginal()));
-                    sortedPanel.getBubblePanel().getJtfSwaps().setText("" + bubbleSort.getSwaps());
+                    sortedPanel.getBubblePanel().getJtfSwaps().setText("" + bubbleSort.getWrites());
                     sortedPanel.getBubblePanel().getJtfChecks().setText("" + bubbleSort.getChecks());
                     bubbleSort.reset();
                     invertedPanel.getBubblePanel().getJtfTime().setText("" + sortTime(bubbleSort, arrayHelp.getInvertedOriginal()));
-                    invertedPanel.getBubblePanel().getJtfSwaps().setText("" + bubbleSort.getSwaps());
+                    invertedPanel.getBubblePanel().getJtfSwaps().setText("" + bubbleSort.getWrites());
                     invertedPanel.getBubblePanel().getJtfChecks().setText("" + bubbleSort.getChecks());
                     bubbleSort.reset();
                     break;
 
                 case "E. Bubble":
                     randomPanel.getEnBubblePanel().getJtfTime().setText("" + sortTime(enBubbleSort, arrayHelp.getRandomOriginal()));
-                    randomPanel.getEnBubblePanel().getJtfSwaps().setText("" + enBubbleSort.getSwaps());
+                    randomPanel.getEnBubblePanel().getJtfSwaps().setText("" + enBubbleSort.getWrites());
                     randomPanel.getEnBubblePanel().getJtfChecks().setText("" + enBubbleSort.getChecks());
                     enBubbleSort.reset();
                     sortedPanel.getEnBubblePanel().getJtfTime().setText("" + sortTime(enBubbleSort, arrayHelp.getSortedOriginal()));
-                    sortedPanel.getEnBubblePanel().getJtfSwaps().setText("" + enBubbleSort.getSwaps());
+                    sortedPanel.getEnBubblePanel().getJtfSwaps().setText("" + enBubbleSort.getWrites());
                     sortedPanel.getEnBubblePanel().getJtfChecks().setText("" + enBubbleSort.getChecks());
                     enBubbleSort.reset();
                     invertedPanel.getEnBubblePanel().getJtfTime().setText("" + sortTime(enBubbleSort, arrayHelp.getInvertedOriginal()));
-                    invertedPanel.getEnBubblePanel().getJtfSwaps().setText("" + enBubbleSort.getSwaps());
+                    invertedPanel.getEnBubblePanel().getJtfSwaps().setText("" + enBubbleSort.getWrites());
                     invertedPanel.getEnBubblePanel().getJtfChecks().setText("" + enBubbleSort.getChecks());
                     enBubbleSort.reset();
                     break;
 
                 case "Selection":
                     randomPanel.getSelectPanel().getJtfTime().setText("" + sortTime(selectionSort, arrayHelp.getRandomOriginal()));
-                    randomPanel.getSelectPanel().getJtfSwaps().setText("" + selectionSort.getSwaps());
+                    randomPanel.getSelectPanel().getJtfSwaps().setText("" + selectionSort.getWrites());
                     randomPanel.getSelectPanel().getJtfChecks().setText("" + selectionSort.getChecks());
                     selectionSort.reset();
                     sortedPanel.getSelectPanel().getJtfTime().setText("" + sortTime(selectionSort, arrayHelp.getSortedOriginal()));
-                    sortedPanel.getSelectPanel().getJtfSwaps().setText("" + selectionSort.getSwaps());
+                    sortedPanel.getSelectPanel().getJtfSwaps().setText("" + selectionSort.getWrites());
                     sortedPanel.getSelectPanel().getJtfChecks().setText("" + selectionSort.getChecks());
                     selectionSort.reset();
                     invertedPanel.getSelectPanel().getJtfTime().setText("" + sortTime(selectionSort, arrayHelp.getInvertedOriginal()));
-                    invertedPanel.getSelectPanel().getJtfSwaps().setText("" + selectionSort.getSwaps());
+                    invertedPanel.getSelectPanel().getJtfSwaps().setText("" + selectionSort.getWrites());
                     invertedPanel.getSelectPanel().getJtfChecks().setText("" + selectionSort.getChecks());
                     selectionSort.reset();
                     break;
 
                 case "Insertion":
                     randomPanel.getInsertPanel().getJtfTime().setText("" + sortTime(insertionSort, arrayHelp.getRandomOriginal()));
-                    randomPanel.getInsertPanel().getJtfSwaps().setText("" + insertionSort.getSwaps());
+                    randomPanel.getInsertPanel().getJtfSwaps().setText("" + insertionSort.getWrites());
                     randomPanel.getInsertPanel().getJtfChecks().setText("" + insertionSort.getChecks());
                     insertionSort.reset();
                     sortedPanel.getInsertPanel().getJtfTime().setText("" + sortTime(insertionSort, arrayHelp.getSortedOriginal()));
-                    sortedPanel.getInsertPanel().getJtfSwaps().setText("" + insertionSort.getSwaps());
+                    sortedPanel.getInsertPanel().getJtfSwaps().setText("" + insertionSort.getWrites());
                     sortedPanel.getInsertPanel().getJtfChecks().setText("" + insertionSort.getChecks());
                     insertionSort.reset();
                     invertedPanel.getInsertPanel().getJtfTime().setText("" + sortTime(insertionSort, arrayHelp.getInvertedOriginal()));
-                    invertedPanel.getInsertPanel().getJtfSwaps().setText("" + insertionSort.getSwaps());
+                    invertedPanel.getInsertPanel().getJtfSwaps().setText("" + insertionSort.getWrites());
                     invertedPanel.getInsertPanel().getJtfChecks().setText("" + insertionSort.getChecks());
                     insertionSort.reset();
                     break;

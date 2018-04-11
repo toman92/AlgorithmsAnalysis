@@ -8,6 +8,7 @@ public abstract class Sort {
 
     private long checks;
     private long swaps;
+    private long writes;
 
     /**
      * Constructor initialises checks and swaps to 0
@@ -15,6 +16,7 @@ public abstract class Sort {
     public Sort() {
         this.checks = 0;
         this.swaps = 0;
+        this.writes = 0;
     }
 
     /**
@@ -31,6 +33,14 @@ public abstract class Sort {
      */
     public long getSwaps() {
         return this.swaps;
+    }
+
+    /**
+     * return the current number of writes that have occurred
+     * @return - number of writes to memory
+     */
+    public long getWrites() {
+        return this.writes;
     }
 
     /**
@@ -56,11 +66,27 @@ public abstract class Sort {
     }
 
     /**
+     * Increments writes to memory by one
+     */
+    public void incWrites() {
+        this.writes++;
+    }
+
+    /**
+     * Increments writes to memory by given amount
+     * @param amount - amount to increment writes by
+     */
+    public void incWrites(long amount) {
+        this.writes += amount;
+    }
+
+    /**
      * Reset swaps and checks back to 0
      */
     public void reset() {
         this.swaps = 0;
         this.checks = 0;
+        this.writes = 0;
     }
 
     /**

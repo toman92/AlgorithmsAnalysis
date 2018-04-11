@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /**
  *  Author: Sean Toman
  *  Date:   18/03/2018
@@ -20,11 +22,26 @@ public class EnBubbleSort extends Sort {
                     int temp = toSort[j];
                     toSort[j] = toSort[j+1];
                     toSort[j+1] = temp;
-                    isSorted = false;
                     incSwaps();
+                    incWrites(3);
+                    isSorted = false;
                 }
             }
         }
         return toSort;
+    }
+
+    public static void main(String[] args) {
+        EnBubbleSort sortTest = new EnBubbleSort();
+        Random noGen = new Random();
+
+        int[] myArray = new int[100];
+        for(int i = 0; i < myArray.length; i++) {
+            myArray[i] = noGen.nextInt(100);
+        }
+        sortTest.sort(myArray);
+        System.out.println("Checks: " + sortTest.getChecks());
+        System.out.println("Swaps: " + sortTest.getSwaps());
+        System.out.println("Writes: " + sortTest.getWrites());
     }
 }
